@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanTodo</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="container">
+          <h1 class="logo">CleanTodo</h1>
+          <p class="tagline">Stay focused. Get things done.</p>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="input-section">
+          <form id="todo-form" class="todo-form">
+            <input type="text" id="todo-input" placeholder="What needs to be done?" autocomplete="off" required />
+            <button type="submit" class="btn-add">+</button>
+          </form>
+        </section>
+
+        <section class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </section>
+
+        <section class="todo-list-section">
+          <ul id="todo-list" class="todo-list"></ul>
+          <p id="empty-state" class="empty-state">No tasks yet. Add one above!</p>
+        </section>
+
+        <footer class="app-footer">
+          <span id="items-left">0 items left</span>
+          <button id="clear-completed" class="btn-clear">Clear completed</button>
+        </footer>
+      </main>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
